@@ -6,7 +6,7 @@ from typing import Dict
 import requests
 
 
-def get_json(ext: str) -> str:
+def get_json(ext: str) -> dict:
     """Fetches JSON from REST endpoint"""
     url = 'https://rest.ensembl.org/' + ext
     result = requests.get(url, headers={"Content-Type": "application/json"})
